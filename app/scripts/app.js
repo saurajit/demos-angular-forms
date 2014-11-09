@@ -14,14 +14,18 @@ angular
     'ngRoute'
   ])
   .config(function ($routeProvider) {
-    $routeProvider
+    $routeProvider      
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'views/forms.html',
+        controller: 'FormsCtrl'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
+      })
+      .when('/nested-forms', {
+        templateUrl: 'views/nestedforms.html',
+        controller: 'NestedformsCtrl'
       })
       .otherwise({
         redirectTo: '/'

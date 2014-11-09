@@ -1,0 +1,21 @@
+<div id="forms-example">
+	<h4>AngularJS Forms</h4>
+	<div class="forms-example-wrapper">
+		<div class="row">
+			<div class="col-md-6">
+				<form name="profileForm" role="form" novalidate>
+					<div class="form-group">
+						<label for="email">Email address</label>
+						<input type="email" class="form-control" id="email" ng-model="profileDetails.email" name="email" ng-required="true" placeholder="Enter email">
+					</div>
+				</form>
+			</div>
+			<div class="col-md-6">
+				<pre>
+				{{profileForm | json}}
+			</pre>
+			</div>
+		</div>
+
+	</div>
+</div>

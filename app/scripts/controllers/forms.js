@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name angularFormsApp.controller:MainCtrl
+ * @name angularFormsApp.controller:FormsCtrl
  * @description
- * # MainCtrl
+ * # FormsCtrl
  * Controller of the angularFormsApp
  */
 angular.module('angularFormsApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('FormsCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
