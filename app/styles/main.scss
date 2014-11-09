@@ -111,3 +111,21 @@ body {
     border-bottom: 0;
   }
 }
+form {
+	padding: 2px;
+}
+form.ng-invalid {
+	border-top: 2px solid #f4aeae;
+}
+form.ng-valid {
+	border-top: 1px solid #AEF4C9;
+}
+form.ng-pristine {
+	border-left: 1px solid #5884F7;
+}
+form.ng-dirty {
+	border-left: none;
+}
+input.ng-invalid {
+	background-color: rgb(244, 174, 174);
+}

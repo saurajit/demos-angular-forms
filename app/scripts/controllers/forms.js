@@ -9,9 +9,5 @@
  */
 angular.module('angularFormsApp')
   .controller('FormsCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    $scope.profileDetails = {};
   });
