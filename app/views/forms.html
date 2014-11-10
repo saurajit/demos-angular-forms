@@ -84,5 +84,32 @@
 				</pre>
 			</div>
 		</div>
-	</div>	
+	</div>
+	
+	<h4>Form pristine/dirty</h4>
+	<div class="forms-example-3">
+		<div class="row">
+			<div class="col-md-6">
+				<form name="pristineDirtyForm" class="form-horizontal" role="form" novalidate>
+					<div class="form-group form-group-sm">
+						<label class="col-sm-4 control-label" for="some-control">Some Form Control</label>
+						<div class="col-xs-8">
+							<input type="text" class="form-control" id="some-control" ng-model="someControl" name="pan" placeholder="Some Form Control">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button type="reset" ng-click="pristineDirtyForm.$setPristine();" ng-disabled="pristineDirtyForm.$pristine" class="btn btn-default">Set Pristine</button>
+							<button type="button" ng-click="pristineDirtyForm.$setDirty();" ng-disabled="pristineDirtyForm.$dirty" class="btn btn-default">Set Dirty</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-6">
+				<pre style="max-height: 120px; overflow: auto;">pristineDirtyForm.$pristine : {{pristineDirtyForm.$pristine}}
+				<br />pristineDirtyForm.$dirty : {{pristineDirtyForm.$dirty}}
+				</pre>
+			</div>
+		</div>
+	</div>
 </div>
