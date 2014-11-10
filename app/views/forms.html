@@ -29,13 +29,13 @@
 					<div class="form-group form-group-sm">
 						<label class="col-sm-4 control-label" for="name">Name</label>
 						<div class="col-xs-8">
-							<input type="test" class="form-control" id="name" ng-model="example2.name" name="name" ng-required="true" placeholder="Enter your name" ng-maxlength="20">
+							<input type="text" class="form-control" id="name" ng-model="example2.name" name="name" ng-required="true" placeholder="Enter your name" ng-maxlength="20">
 						</div>
 					</div>
 					<div class="form-group form-group-sm">
 						<label class="col-sm-4 control-label" for="pan">PAN Number</label>
 						<div class="col-xs-8">
-							<input type="test" class="form-control" id="pan" ng-model="example2.pan" name="pan" ng-required="true" placeholder="Enter PAN number" ng-maxlength="10" ng-minlength="10">
+							<input type="text" class="form-control" id="pan" ng-model="example2.pan" name="pan" ng-required="true" placeholder="Enter PAN number" ng-maxlength="10" ng-minlength="10">
 							<div ng-show="builtInValidationForm.pan.$error.required">PAN number is required.</div>
 							<div ng-show="builtInValidationForm.pan.$error.maxlength">PAN number should be a maximum of 10 characters.</div>
 							<div ng-show="builtInValidationForm.pan.$error.minlength">PAN number should be a minimum of 10 characters.</div>
@@ -43,7 +43,7 @@
 					</div>
 					<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10">
-							<button type="submit" class="btn btn-default">Sign in</button>
+							<button type="submit" class="btn btn-default">Submit</button>
 						</div>
 					</div>
 				</form>
@@ -57,4 +57,32 @@
 			</div>
 		</div>
 	</div>
+	
+	<h4>Custom validators</h4>
+	<div class="forms-example-3">
+		<div class="row">
+			<div class="col-md-6">
+				<form name="customValidationForm" class="form-horizontal" role="form" novalidate ng-submit="validateExample3()">
+					<div class="form-group form-group-sm">
+						<label class="col-sm-4 control-label" for="pan-custom">PAN Number</label>
+						<div class="col-xs-8">
+							<input type="text" class="form-control" id="pan-custom" ng-model="example3.pan" name="pan" ng-required="true" placeholder="Enter PAN number">
+							<div ng-show="customValidationForm.pan.$error.panformat">PAN number format is invalid.</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button type="submit" class="btn btn-default">Submit</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-6">
+				<pre style="max-height: 120px; overflow: auto;">Data modal object:<br />{{example3 | json}}
+				<br />customValidationForm.$valid : {{customValidationForm.$valid}}
+				<br />customValidationForm.pan.$error : {{customValidationForm.pan.$error | json}}
+				</pre>
+			</div>
+		</div>
+	</div>	
 </div>
