@@ -8,6 +8,10 @@
  * Controller of the angularFormsApp
  */
 angular.module('angularFormsApp')
-  .controller('FormsCtrl', function ($scope) {
-    $scope.profileDetails = {};
-  });
+	.controller('FormsCtrl', function ($scope) {
+	$scope.example1 = {};
+	
+	$scope.submitExample2 = function() {
+		console.log($scope.builtInValidationForm);
+	};
+	});
