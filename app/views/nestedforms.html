@@ -1,1 +1,31 @@
-<p>This is the nestedForms view.</p>
+<div id="nested-forms-example">
+	<div class="row">
+		<div class="col-md-12">
+			<form name="personForm" class="form-horizontal" role="form" novalidate>
+				<label for="firstNameEdit">First name:</label>
+				<input id="firstNameEdit" type="text" name="firstName" ng-model="person.firstName" required />
+				<br />
+				<label for="lastNameEdit">Last name:</label>
+				<input id="lastNameEdit" type="text" name="lastName" ng-model="person.lastName" required />
+				<br />
+				<ng-include src="'views/address.html'"></ng-include>
+			</form>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<label>Person:</label>
+			<pre>{{person | json}}</pre>
+		</div>
+		<div class="col-md-6">
+			<label>Form validity:</label>
+			<ul>
+				<li><strong>personForm.$valid =</strong> {{personForm.$valid}}</li>
+				<li><strong>personForm.addressForm.$valid =</strong> {{personForm.addressForm.$valid}}</li>
+				<li><strong>personForm.firstName.$valid =</strong> {{personForm.firstName.$valid}}</li>
+				<li><strong>personForm.lastName.$valid =</strong> {{personForm.lastName.$valid}}</li>
+				<li><strong>personForm.addressForm.zip.$valid =</strong> {{personForm.addressForm.zip.$valid}}</li>
+			</ul>
+		</div>
+	</div>
+</div>
